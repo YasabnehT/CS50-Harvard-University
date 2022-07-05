@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+    {% block body%}
+        <h1>Register for Frosh IMs</h1>
+        <form action = '/register' method = 'POST'>
+            <input name = 'name' placeholder = 'Name' type = 'text'>
+            <select name ='dorm'>
+                <option disabled selected value=''>Dorm </option>
+                <option value='Apley Court'> Apley Court </option>
+                <option value = 'Canaday'> Canaday</option>
+                <option value = '502'> 502</option>
+                <option value = '504'> 504</option>
+                <option value = '411'> 411</option>
+                <option value = '413'> 413</option>
+            </select>
+            <input type='submit' value='Register'>
+        </form>
+        <script src='form_validation.js'></script>
+    {% endblock%}
