@@ -1,0 +1,25 @@
+<!doctype html>
+<html language-'en'>
+    <head>
+        <title>Word-search 1</title> 
+    </head>
+    <body>
+        <input autocomplete = 'off' autofocus placeholder='Query' type='text'>
+        <ul></ul>
+        <script src = 'large.js'></script>
+        <script>
+            input = document.querySelector('input');
+            input.onkeyup = function(){
+                let html = ''
+                if(input.value){
+                    for(word of WORDS){
+                        if(word.startsWith(input.value)){
+                            html+= '<li>'+ word + '</li>';
+                        }
+                    }
+                }
+                document.querySelector('ul').innerHTML = html;
+            };
+        </script
+    </body>
+</html>
